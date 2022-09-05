@@ -1,4 +1,4 @@
-local LP = game.Players.LocalPlayer
+local LP = game:GetService("Players").LocalPlayer
     local Mouse = LP:GetMouse()
     toggler = Fly
     local SPEED = 0
@@ -7,7 +7,7 @@ local LP = game.Players.LocalPlayer
     
     function sFLY() 
         repeat wait() until LP and LP.Character and LP.Character:FindFirstChild('HumanoidRootPart') and LP.Character:FindFirstChild('Humanoid')
-            game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").Anchored = true
+            LP.Character:WaitForChild("HumanoidRootPart").Anchored = true
         repeat wait() until Mouse
             local T = game.Players.LocalPlayer.Character.HumanoidRootPart
             local CONTROL = {F = 0, B = 0, L = 0, R = 0}
